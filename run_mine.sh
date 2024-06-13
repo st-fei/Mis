@@ -1,0 +1,36 @@
+python mine_main.py \
+    --seed 2 \
+    --experiment_name mine_v2 \
+    --gpu_ids 1  \
+    --model_name_or_path /home/tfshen/pyproject/my_dataset_ablations/chinese_bart \
+    --max_desc_length 40 \
+    --max_his_length 140 \
+    --max_resp_length 40 \
+    --max_prior_length 50 \
+    --epoch 10 \
+    --train_batch_size 16 \
+    --test_batch_size 1 \
+    --num_workers 16 \
+    --lr 3e-5 \
+    --weight_decay 0.0001 \
+    --warmup 0.01 \
+    --gradient_accumulation_steps 1 \
+    --do_train \
+    --retrieve_num 1 \
+    --topk 2 \
+    --topj 12 \
+    --num_beams 3 \
+    --repetition_penalty 1.25 \
+    --length_penalty 1.15 \
+    --logging_steps 10 \
+    --plt_steps 1000 \
+    --save_steps 20000 \
+    --evaluate_during_training \
+    --retrieve_enable \
+    --lossfig_path /home/tfshen/pyproject/my_dataset_ablations/lossfig \
+    --text_dir /home/tfshen/pyproject/my_dataset_ablations/retrieve_dataset \
+    --feat_path /mnt/sda/tfshen/clip_feat.h5 \
+    --output_dir /mnt/sda/tfshen/ablation_result \
+    --xlsx_dir /home/tfshen/pyproject/my_dataset_ablations/record \
+    --train_log_path /home/tfshen/pyproject/my_dataset_ablations/train_logs \
+    --eval_log_path /home/tfshen/pyproject/my_dataset_ablations/test_logs \
